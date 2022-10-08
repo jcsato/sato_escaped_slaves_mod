@@ -31,7 +31,7 @@ sato_manhunter <- inherit("scripts/entity/tactical/human", {
 		m.Hitpoints = b.Hitpoints;
 		m.CurrentProperties = clone b;
 		setAppearance();
-        getSprite("socket").setBrush("bust_base_nomads");
+		getSprite("socket").setBrush("bust_base_nomads");
 
 		if (Math.rand(1, 100) <= 15)
 		{
@@ -84,15 +84,15 @@ sato_manhunter <- inherit("scripts/entity/tactical/human", {
 		];
 
 		if (Const.DLC.Wildmen)
-        {
-            weapons.extend([
+		{
+			weapons.extend([
 				"weapons/scimitar",
 				"weapons/scimitar",
 				"weapons/oriental/light_southern_mace",
 				"weapons/oriental/light_southern_mace",
-                "weapons/battle_whip"
-            ]);
-        }
+				"weapons/battle_whip"
+			]);
+		}
 
 		m.Items.equip(new("scripts/items/" + weapons[Math.rand(0, weapons.len() - 1)]));
 
@@ -112,16 +112,16 @@ sato_manhunter <- inherit("scripts/entity/tactical/human", {
 			]);
 		}
 		m.Items.equip(new("scripts/items/" + armor[Math.rand(0, armor.len() - 1)]));
-		local helmet = [
+		local helmets = [
 			"helmets/oriental/nomad_leather_cap",
 			"helmets/oriental/leather_head_wrap",
-            "helmets/oriental/wrapped_southern_helmet",
-            "helmets/oriental/spiked_skull_cap_with_mail"
+			"helmets/oriental/wrapped_southern_helmet",
+			"helmets/oriental/spiked_skull_cap_with_mail"
 		];
 
 		if (World.getTime().Days <= 18)
 		{
-			helmet.extend([
+			helmets.extend([
 				"helmets/oriental/southern_head_wrap"
 			]);
 		} else if (::mods_getRegisteredMod("sato_additional_equipment") != null) {
@@ -130,6 +130,6 @@ sato_manhunter <- inherit("scripts/entity/tactical/human", {
 			]);
 		}
 
-		m.Items.equip(new("scripts/items/" + helmet[Math.rand(0, helmet.len() - 1)]));
+		m.Items.equip(new("scripts/items/" + helmets[Math.rand(0, helmets.len() - 1)]));
 	}
 });

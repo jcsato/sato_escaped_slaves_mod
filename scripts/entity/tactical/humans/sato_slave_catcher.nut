@@ -109,7 +109,7 @@ sato_slave_catcher <- inherit("scripts/entity/tactical/human", {
 		}
 
 		m.Items.equip(new("scripts/items/" + armor[Math.rand(0, armor.len() - 1)]));
-		local helmet = [
+		local helmets = [
 			"helmets/oriental/southern_head_wrap",
 			"helmets/oriental/nomad_leather_cap",
 			"helmets/oriental/nomad_light_helmet"
@@ -121,6 +121,6 @@ sato_slave_catcher <- inherit("scripts/entity/tactical/human", {
 			]);
 		}
 
-		m.Items.equip(new("scripts/items/" + helmet[Math.rand(0, helmet.len() - 1)]));
+		m.Items.equip(new("scripts/items/" + helmets[Math.rand(0, helmets.len() - 1)]));
 	}
 });
