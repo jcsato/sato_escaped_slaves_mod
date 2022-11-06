@@ -1,16 +1,22 @@
 local gt = getroottable();
 
-gt.Const.EntityType.SatoManhunter <- 107;
+local max = 0;
+foreach(key, value in ::Const.EntityType) {
+	if (typeof value == "integer" && value > max)
+		max = value; 
+}
+
+gt.Const.EntityType.SatoManhunter <- ++max;
 gt.Const.Strings.EntityName.push("Manhunter");
 gt.Const.Strings.EntityNamePlural.push("Manhunters");
 gt.Const.EntityIcon.push("manhunter_orientation"); // I believe this is the pre-battle image, needed for e.g. height level display. Will need to come up with an asset
 
-gt.Const.EntityType.SatoManhunterVeteran <- 108;
+gt.Const.EntityType.SatoManhunterVeteran <- ++max;
 gt.Const.Strings.EntityName.push("Manhunter Veteran");
 gt.Const.Strings.EntityNamePlural.push("Manhunter Veterans");
 gt.Const.EntityIcon.push("manhunter_veteran_orientation");
 
-gt.Const.EntityType.SatoSlaveCatcher <- 109;
+gt.Const.EntityType.SatoSlaveCatcher <- ++max;
 gt.Const.Strings.EntityName.push("Slave Catcher");
 gt.Const.Strings.EntityNamePlural.push("Slave Catchers");
 gt.Const.EntityIcon.push("slavecatcher_orientation");
