@@ -2,7 +2,7 @@
 
 set modname=sato_escaped_slaves_origin
 set modkitdir=YOUR_MODKIT_BIN_PATH
-set version=2.3.2
+set version=2.3.3
 
 echo.
 echo Creating temporary directory...
